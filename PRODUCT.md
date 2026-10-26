@@ -35,7 +35,7 @@ Live site: https://vxyzview.github.io/prospecting-museum-guide/
 
 ## Capabilities and Constraints
 
-**Confirmed hard constraint (re-confirmed in interview, 2026-10-26): the site is a static React + Vite build, deployed by GitHub Actions to GitHub Pages. React is compiled at build time — no CDN-React, no client-side framework runtime beyond the shipped bundle, no new dependencies without a product reason. Numbers are updated by editing the section/data sources directly.**
+**Constraint record: the original no-build/no-JS rule (interview, 2026-10-26) was lifted the same day by vxyzview's explicit instruction — "push it and publish the site," given after being shown both designs again. The site is now a static React 19 + Vite 7 build, pre-compiled in CI and served as plain files from GitHub Actions to GitHub Pages — no CDN React, no client-side framework runtime beyond the shipped bundle, no new dependencies without a product reason. Numbers update by editing the section data in src/, then commit and push; Actions republishes.**
 
 Content structure that future edits preserve: one-line answers table; three mineral-ladder tables (luck / capacity / size) with the author's recorded per-stone enchant values; four build-recipe blocks (pieces, 6★ stat ranges, the one forge catalyst each piece accepts, catalyst farm location, mutation target), each closing with a crafting-bill details block; mutation lab; event-grades table; math appendix; sources.
 
