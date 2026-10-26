@@ -1,3 +1,8 @@
+node_modules/
+dist/
+*.local
 .impeccable/review/
-.impeccable/surfaces/
-surface-brief-body.md
+.impeccable/live/
+.impeccable/mocks/
+.impeccable/build/
+.impeccable/questions/

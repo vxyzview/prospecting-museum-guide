@@ -30,12 +30,12 @@ Live site: https://vxyzview.github.io/prospecting-museum-guide/
 
 - Read mid-session, often on a phone, around events that fire every 30 minutes on the dot (XX:00 / XX:30) and are identical across servers. Desert digsites are marked 🏜 throughout.
 - Numbers trace to pinned wiki revisions — Mutations rev 7033 (16 Aug 2026), Events rev 7172 (5 Oct 2026), plus the live Mineral and Equipment pages — kept as dated links in the Sources section. When the wiki revises, the guide's numbers must be re-checked against the new revision.
-- Update loop: edit index.html, commit, push; GitHub Pages republishes on its own.
-- Wiki text is CC BY-NC-SA and must be attributed. No Roblox assets are used on the site.
+- Update loop (since the 2026-10-26 React rebuild): edit the data/section sources, commit, push; GitHub Actions builds with Vite and republishes GitHub Pages on its own.
+- Wiki text AND imagery are CC BY-NC-SA and must be attributed. Site imagery comes from the Official Prospecting! Wiki (screenshot-style scene images and item icons), downloaded into the repo and credited in the Sources section; no other Roblox assets are used, and the game is not affiliated.
 
 ## Capabilities and Constraints
 
-**Confirmed hard constraint (interview, 2026-10-26): for all future work the build stays plain HTML + one CSS file — no build step, no JavaScript, no dependencies, ever.** Numbers are updated by editing index.html directly.
+**Confirmed hard constraint (re-confirmed in interview, 2026-10-26): the site is a static React + Vite build, deployed by GitHub Actions to GitHub Pages. React is compiled at build time — no CDN-React, no client-side framework runtime beyond the shipped bundle, no new dependencies without a product reason. Numbers are updated by editing the section/data sources directly.**
 
 Content structure that future edits preserve: one-line answers table; three mineral-ladder tables (luck / capacity / size) with the author's recorded per-stone enchant values; four build-recipe blocks (pieces, 6★ stat ranges, the one forge catalyst each piece accepts, catalyst farm location, mutation target), each closing with a crafting-bill details block; mutation lab; event-grades table; math appendix; sources.
 
@@ -55,11 +55,11 @@ Content structure that future edits preserve: one-line answers table; three mine
 
 1. **Numbers first, work shown.** Every recommendation traces to a pinned wiki table or the author's own arithmetic; claims carry their derivation instead of standing on assertion.
 2. **Answer in one line.** The askers' questions are answered at the top; justification, recipes, and math follow in reading order for those who keep reading.
-3. **Stay boring to stay fast.** Plain HTML, no JS, no build: any phone gets the full page instantly, and the update loop is an editor, not a pipeline.
+3. **Stay static to stay fast.** Everything ships as prebuilt files from CI: any phone gets the full page instantly, no runtime data fetching, no trackers; the update loop is editing sources and committing, not operating a pipeline.
 4. **The desert feeds the grind.** Setups are designed so their own catalyst and material stocks restock inside the same farming loop — travel cost is a design input, not an afterthought.
 5. **Honest provenance.** Wiki-derived facts attributed to the Official Prospecting! Wiki (CC BY-NC-SA); original math credited to vxyzview; never present an inference as a wiki fact.
 
 ## Accessibility & Inclusion
 
 - Confirmed binding: Atkinson Hyperlegible as the body font and strong contrast stay; "high-legibility body font that works on any phone" is the whole requirement — no WCAG-level audit promised or claimed.
-- The page already does this structurally: real table headers with `scope`, aria-hidden decorative glyphs, `details`/`summary` collapsibles that work without JavaScript, single-column responsive reading.
+- The page already does this structurally: real table headers with `scope`, aria-hidden decorative glyphs, native `<details>`/`<summary>` collapsibles, keyboard focus rings, single-column responsive reading.

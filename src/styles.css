@@ -1,0 +1,654 @@
+/* ============================================================
+   The Sunscorched Ledger — by vxyzview
+   Night-room specimen catalog: warm near-black ground, warm
+   off-white column, hairline rules, one desert-gold accent.
+   Real specimens from the Official Prospecting! Wiki.
+   React + Vite; faces self-hosted via @fontsource.
+   ============================================================ */
+
+:root {
+  color-scheme: dark;
+
+  --ground:      #14110d;   /* warm near-black umber — never pure #000 */
+  --panel:       #1b1712;   /* slightly lifted panels, figures, chips */
+  --panel-2:     #201b15;
+
+  --text:        #f0e9dc;   /* warm off-white column */
+  --text-2:      #bdb3a1;   /* secondary */
+  --muted:       #8d8372;   /* captions, footlines */
+
+  --line:        rgba(240, 233, 220, 0.12);
+  --line-strong: rgba(240, 233, 220, 0.26);
+
+  --gold:        #e3a72c;   /* accent marks: tabs, dots, ticks, seal */
+  --gold-text:   #e6b45a;   /* accent text — AA on --ground */
+
+  /* the four builds, keyed to their signature minerals (marks only) */
+  --teal:        #56c9ab;   /* Key of Life   — GUARDIAN */
+  --gold-dot:    #dda53e;   /* Eye of sands  — SUNSTRUCK */
+  --ember:       #e07a4a;   /* Solarium/Fire Opal — COLOSSUS */
+  --steel:       #89a8d8;   /* Adamantine    — FOREMAN */
+
+  --display: "Archivo Variable", "Archivo", "Segoe UI", system-ui, sans-serif;
+  --body:    "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+
+  --wrap: 66rem;
+  --pad: clamp(1.1rem, 4vw, 2.2rem);
+  --section: clamp(3.2rem, 8vw, 5.5rem);
+  --r: 4px;
+}
+
+* { box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--gold); color: #14110d; }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+::-webkit-scrollbar { height: 8px; width: 10px; }
+::-webkit-scrollbar-thumb { background: #2e271f; border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--pad); }
+
+.measure { max-width: 44rem; }
+
+p { margin: 0.6em 0; }
+
+a { color: var(--gold-text); text-decoration-color: rgba(230, 180, 90, 0.5); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+a:hover { color: var(--gold); text-decoration-color: var(--gold); }
+
+strong { color: var(--text); font-weight: 700; }
+em { font-style: italic; }
+
+/* ---------- headings ---------- */
+
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+
+h1 {
+  font-size: clamp(2.55rem, 7.2vw, 4.7rem);
+  font-weight: 640;
+  font-variation-settings: "wght" 640;
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+}
+
+h2 {
+  font-size: clamp(1.55rem, 4.2vw, 2.1rem);
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+  line-height: 1.12;
+  letter-spacing: 0.012em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3.1vw, 1.6rem);
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+/* numbered exhibit heads: hairline + gold stop number */
+.stop {
+  border-top: 1px solid var(--line-strong);
+  padding-top: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.stop .stopn {
+  display: inline-block;
+  font-family: var(--body);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-right: 0.75em;
+  vertical-align: 0.22em;
+}
+
+.label {
+  font-family: var(--display);
+  font-variation-settings: "wght" 570;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.lede { color: var(--text-2); max-width: 46rem; margin-top: 0.4rem; }
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(20, 17, 13, 0.92);
+  border-bottom: 1px solid var(--line);
+}
+
+.masthead-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0.65rem var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.brand {
+  font-family: var(--display);
+  font-variation-settings: "wght" 650;
+  font-size: 0.95rem;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand:hover { color: var(--text); }
+.brand .brand-author { color: var(--muted); margin-left: 0.55em; letter-spacing: 0.09em; }
+
+.jump {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.jump::-webkit-scrollbar { display: none; }
+
+.jump a {
+  font-family: var(--display);
+  font-variation-settings: "wght" 560;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.35rem 0;
+}
+.jump a .stopn { font-size: 0.62rem; margin-right: 0.45em; color: var(--gold); }
+.jump a:hover { color: var(--text); }
+.jump a:focus-visible { outline-offset: -1px; }
+
+/* ---------- hero ---------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 22% 68%;
+  filter: saturate(0.92);
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(66% 68% at 83% 4%, rgba(20, 17, 13, 0.98) 30%, rgba(20, 17, 13, 0.6) 68%, rgba(20, 17, 13, 0) 90%),
+    radial-gradient(46% 52% at 4% 88%, rgba(20, 17, 13, 0.88) 0%, rgba(20, 17, 13, 0) 70%),
+    linear-gradient(180deg, rgba(20, 17, 13, 0.92) 0%, rgba(20, 17, 13, 0.62) 42%, rgba(20, 17, 13, 0.96) 100%),
+    linear-gradient(100deg, rgba(20, 17, 13, 0.86) 0%, rgba(20, 17, 13, 0.4) 60%, rgba(20, 17, 13, 0.78) 100%);
+}
+
+.hero-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: clamp(3.4rem, 9vw, 6rem) var(--pad) clamp(2.1rem, 5vw, 2.8rem);
+}
+
+.hero-fact {
+  font-family: var(--display);
+  font-variation-settings: "wght" 560;
+  font-size: 0.74rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+.hero-fact .sep { color: var(--gold); margin: 0 0.55em; }
+
+.hero h1 { max-width: 15ch; }
+.hero-sub { max-width: 40rem; color: var(--text-2); font-size: 1.08rem; margin-top: 1.15rem; }
+.hero-sub strong { color: var(--text); }
+
+.hero-credit { margin-top: 1.3rem; color: var(--muted); font-size: 0.95rem; }
+.sig { color: var(--gold-text); font-weight: 700; }
+.hero-note { display: inline-block; color: var(--muted); font-size: 0.85rem; }
+.hero-credit .hero-note::before { content: "— "; color: var(--muted); }
+
+/* the four builds, as hairline plates with real specimens */
+.plates {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem;
+  margin-top: 2rem;
+  max-width: 50rem;
+}
+
+.plate {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(27, 23, 18, 0.82);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 0.6rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.plate:hover { border-color: var(--line-strong); background: rgba(32, 27, 21, 0.92); }
+
+.plate img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex: none;
+  background: #26201a;
+  border-radius: 3px;
+  padding: 3px;
+  box-sizing: border-box;
+  /* lifts the dark in-game glyph tiles off the warm-dark ground */
+  filter: brightness(1.28) contrast(1.05) saturate(1.06);
+}
+
+.plate .plate-name {
+  display: block;
+  font-family: var(--display);
+  font-variation-settings: "wght" 640;
+  font-size: 0.82rem;
+  letter-spacing: 0.055em;
+  color: var(--text);
+  line-height: 1.2;
+}
+.plate .plate-tag { display: block; font-size: 0.72rem; color: var(--muted); line-height: 1.35; }
+
+.hero-new {
+  margin-top: 1.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 46rem;
+}
+.hero-new strong { color: var(--text-2); }
+
+/* ---------- sections ---------- */
+
+section { padding-block: var(--section); }
+
+section + section { padding-top: calc(var(--section) * 0.55); }
+
+section .head { margin-bottom: 1.6rem; }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.6rem, 4.5vw, 3rem); }
+
+/* ---------- specimen figures ---------- */
+
+.triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2.4rem 0 0.4rem;
+}
+
+figure.specimen { margin: 0; }
+
+figure.specimen .frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--panel);
+  line-height: 0;
+}
+
+figure.specimen img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  filter: brightness(0.82) saturate(0.95);
+  transition: filter 200ms ease;
+}
+figure.specimen:hover img { filter: brightness(0.95); }
+
+figure.specimen figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.15rem 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+figure.specimen figcaption .cap-name {
+  font-family: var(--display);
+  font-variation-settings: "wght" 590;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+figure.specimen figcaption .cap-note { text-align: right; }
+
+/* the lab exhibit */
+.exhibit {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.4rem, 4vw, 2.8rem);
+  align-items: center;
+  margin: 0 0 2rem;
+}
+
+.exhibit .frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--panel);
+  line-height: 0;
+}
+.exhibit .frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(0.85) saturate(0.96);
+}
+.exhibit figcaption {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ---------- ledger tables ---------- */
+
+.scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.4rem 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: rgba(27, 23, 18, 0.5);
+}
+
+table.ledger {
+  width: 100%;
+  min-width: 44rem;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+.ledger th {
+  font-family: var(--display);
+  font-variation-settings: "wght" 580;
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--line-strong);
+  white-space: nowrap;
+}
+
+.ledger td {
+  padding: 0.8rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  font-variant-numeric: tabular-nums;
+}
+
+.ledger tr:last-child td { border-bottom: none; }
+
+.ledger em.price { display: block; font-style: normal; font-size: 0.8rem; color: var(--muted); margin-top: 0.15em; }
+
+/* mineral callouts: inline specimen before the name */
+.mcell { display: flex; align-items: center; gap: 0.6rem; min-width: 12rem; }
+.mcell img { width: 30px; height: 30px; object-fit: contain; flex: none; }
+.mcell span { line-height: 1.35; }
+.mcell .mcell-sub { display: block; font-size: 0.78rem; color: var(--muted); }
+
+.footline { color: var(--muted); font-size: 0.88rem; max-width: 52rem; margin-top: 0.9rem; }
+
+/* row vocabulary: soft warm wash for endcaps; one reserved exhibit row */
+.ledger .hi td { background: rgba(240, 233, 220, 0.035); }
+
+.ledger tr.inv td {
+  background: rgba(227, 167, 44, 0.1);
+  border-top: 1px solid rgba(227, 167, 44, 0.35);
+  border-bottom: 1px solid rgba(227, 167, 44, 0.35);
+}
+.ledger tr.inv td:first-child { box-shadow: inset 3px 0 0 var(--gold); }
+.ledger tr.inv strong, .ledger tr.inv a { color: var(--gold); }
+.ledger tr.inv strong { color: var(--gold-text); }
+
+/* build blocks */
+.build { margin-top: 2.6rem; border-top: 1px solid var(--line-strong); padding-top: 1.5rem; }
+.build:first-of-type { margin-top: 0; }
+
+.build-head { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; }
+
+.build-head img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--panel);
+  padding: 0.35rem;
+  flex: none;
+}
+
+.build-head h3 { line-height: 1.05; display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap; }
+
+.build-tag {
+  font-family: var(--body);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.18rem 0.5rem;
+  white-space: nowrap;
+  font-variation-settings: normal;
+}
+
+.build-head p { color: var(--text-2); max-width: 52rem; margin-top: 0.55rem; }
+
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--dotc, var(--gold)); flex: none; }
+.dot-guardian { --dotc: var(--teal); }
+.dot-sunstruck { --dotc: var(--gold-dot); }
+.dot-colossus { --dotc: var(--ember); }
+.dot-foreman { --dotc: var(--steel); }
+
+.build-h { display: inline-flex; align-items: center; gap: 0.6rem; }
+
+.build-note {
+  border-top: 1px dashed var(--line);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  color: var(--text-2);
+  max-width: 52rem;
+}
+
+/* crafting bills */
+details.bill {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: rgba(27, 23, 18, 0.5);
+}
+
+details.bill summary, details.working > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+  font-family: var(--display);
+  font-variation-settings: "wght" 580;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 1.5px solid var(--gold);
+  border-bottom: 1.5px solid var(--gold);
+  transform: rotate(-45deg);
+  transition: transform 160ms ease;
+  flex: none;
+}
+details[open] > summary::before { transform: rotate(45deg); }
+details > summary:hover { color: var(--text); }
+
+details.bill ul { margin: 0; padding: 0.2rem 1.4rem 1rem 2.4rem; }
+details.bill li { margin: 0.45em 0; color: var(--text-2); font-size: 0.93rem; }
+details.bill .bill-sum {
+  margin: 0 1.4rem 1rem 2.4rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* ---------- workings (math appendix) ---------- */
+
+details.working {
+  border-top: 1px solid var(--line);
+  padding: 0.4rem 0;
+}
+details.working > summary { padding: 0.85rem 0; }
+details.working > div { padding: 0 0 1.2rem; max-width: 46rem; color: var(--text-2); }
+details.working table { margin-top: 0.8rem; }
+details.working table.ledger { min-width: 0; }
+
+.wnum {
+  display: inline-block;
+  font-family: var(--body);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.66rem;
+  color: var(--gold);
+  border: 1px solid rgba(227, 167, 44, 0.4);
+  border-radius: 3px;
+  padding: 0.2em 0.5em;
+  letter-spacing: 0.08em;
+}
+
+/* kit definition list */
+dl.kit { margin: 0.4rem 0 0; }
+dl.kit dt { font-weight: 700; color: var(--text); }
+dl.kit dd { margin: 0.15rem 0 0.9rem; color: var(--text-2); font-size: 0.95rem; }
+
+.warn { border-left: 2px solid var(--gold); padding-left: 0.9rem; color: var(--text-2); }
+
+/* event glyph marks */
+.glyph { display: inline-block; width: 15px; height: 15px; vertical-align: -2px; color: var(--muted); }
+
+/* ---------- sources & colophon ---------- */
+
+ul.srcs { list-style: none; margin: 1rem 0; padding: 0; max-width: 52rem; }
+ul.srcs li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: 0.95rem;
+}
+ul.srcs li::before { content: "— "; color: var(--muted); }
+
+ul.credits { list-style: none; margin: 1.2rem 0 0; padding: 0; color: var(--muted); font-size: 0.84rem; max-width: 52rem; }
+ul.credits li { display: flex; gap: 0.8rem; padding: 0.3rem 0; flex-wrap: wrap; }
+ul.credits img { width: 22px; height: 22px; object-fit: contain; flex: none; vertical-align: baseline; margin-top: 2px; }
+ul.credits .credit-label { min-width: 15rem; color: var(--text-2); }
+
+.foot-credit { color: var(--muted); font-size: 0.88rem; max-width: 52rem; margin-top: 1.4rem; }
+
+.site-foot { border-top: 1px solid var(--line-strong); padding: 2.4rem 0 3rem; }
+.foot-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  justify-content: space-between;
+}
+.foot-inner p { color: var(--muted); font-size: 0.88rem; max-width: 44rem; }
+
+.stamp { flex: none; color: var(--line-strong); }
+.stamp .stamp-g { transform-box: view-box; transform-origin: 60px 60px; }
+@media (prefers-reduced-motion: no-preference) {
+  .stamp .stamp-g { animation: stamp-spin 36s linear infinite; }
+  @keyframes stamp-spin { to { transform: rotate(360deg); } }
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 980px) {
+  .exhibit { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .plates { grid-template-columns: 1fr 1fr; margin-bottom: 0.4rem; }
+  .triptych { grid-template-columns: 1fr; }
+  .triptych figure.specimen img { aspect-ratio: 16 / 6; }
+  table.ledger { font-size: 0.93rem; min-width: 40rem; }
+  .ledger th, .ledger td { padding: 0.65rem 0.7rem; }
+  .mcell { min-width: 9.5rem; }
+  section { padding-block: calc(var(--section) * 0.72); }
+}
+
+@media (max-width: 560px) {
+  .masthead-inner { gap: 1rem; }
+  .brand { font-size: 0.83rem; }
+  .plates { grid-template-columns: 1fr 1fr; gap: 0.6rem; padding-left: 0; padding-right: 0; }
+  .plate { padding: 0.5rem 0.55rem; gap: 0.5rem; }
+  .plate img { width: 28px; height: 28px; }
+  .plate .plate-name { font-size: 0.74rem; }
+  .plate .plate-tag { font-size: 0.66rem; }
+  .build-head { flex-direction: column; gap: 0.7rem; }
+  .foot-inner { flex-direction: column; align-items: flex-start; }
+  .jump { margin-top: 0.2rem; }
+}

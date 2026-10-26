@@ -1,119 +1,126 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-26T05:40:00Z",
+  "generatedAt": "2026-10-26T07:40:00Z",
   "title": "Design System: The Sunscorched Ledger",
   "extensions": {
     "colorMeta": {
-      "desert-line-gold": { "role": "primary", "displayName": "Desert-Line Gold", "canonical": "#8a5a00", "tonalRamp": ["#6f4900", "#7c5100", "#8a5a00", "#9a6a08", "#aa7c18", "#bc9033", "#d0a954", "#e3a72c"] },
-      "signal-gold": { "role": "primary", "displayName": "Signal Gold", "canonical": "#e3a72c", "tonalRamp": ["#8a5a00", "#a87500", "#bf8c05", "#d19d12", "#e3a72c", "#eabc52", "#f0cc76", "#f7dd9d"] },
-      "bleached-paper": { "role": "neutral", "displayName": "Bleached Paper", "canonical": "#fbf7ee", "tonalRamp": ["#3a3327", "#544a39", "#6e6353", "#9b917f", "#c4bbab", "#e9dfc8", "#f2ebdc", "#fbf7ee"] },
-      "hot-sand": { "role": "neutral", "displayName": "Hot Sand", "canonical": "#f2ebdc", "tonalRamp": ["#4a4133", "#6e6353", "#8f8574", "#b0a590", "#cec2a7", "#e9dfc8", "#f2ebdc", "#fbf7ee"] },
-      "departure-tint": { "role": "neutral", "displayName": "Departure Tint", "canonical": "#e9dfc8", "tonalRamp": ["#4a4133", "#6e6353", "#93876f", "#b3a482", "#cfc19e", "#e0d3af", "#e9dfc8", "#f2ebdc"] },
-      "press-ink": { "role": "neutral", "displayName": "Press Ink", "canonical": "#211a10", "tonalRamp": ["#211a10", "#332a1c", "#4a4133", "#615648", "#7c7264", "#9b917f", "#b6a893", "#d3cabb"] },
-      "dust": { "role": "neutral", "displayName": "Dust", "canonical": "#6e6353", "tonalRamp": ["#211a10", "#4a4133", "#6e6353", "#8f8574", "#ae9f8c", "#c9bdab", "#e0d8c9", "#f2ebdc"] },
-      "oasis-teal": { "role": "secondary", "displayName": "Oasis Teal", "canonical": "#1f6e60", "tonalRamp": ["#154a40", "#1f6e60", "#2c8474", "#3f9b8a", "#5bb3a1", "#7fc9ba", "#a4dcd0", "#c9ecE3"] },
-      "solarium-gold": { "role": "secondary", "displayName": "Solarium Gold", "canonical": "#a87500", "tonalRamp": ["#6f4900", "#8a5a00", "#a87500", "#bd8c10", "#cfa22c", "#ddb84e", "#e8cc7a", "#f2e0a9"] },
-      "fire-opal": { "role": "secondary", "displayName": "Fire Opal", "canonical": "#a63e14", "tonalRamp": ["#6e2508", "#8f2f0c", "#a63e14", "#bd5324", "#cf683a", "#de8257", "#ea9f7c", "#f2bfa4"] },
-      "adamantine-steel": { "role": "secondary", "displayName": "Adamantine Steel", "canonical": "#44608a", "tonalRamp": ["#2b3c57", "#44608a", "#5876a2", "#6d8bb4", "#84a2c2", "#9cb6d1", "#b7cadd", "#d5e0ec"] }
+      "night-room-umber": { "role": "neutral", "displayName": "Night-Room Umber", "canonical": "#14110d", "tonalRamp": ["#0f0d09", "#14110d", "#191510", "#211b13", "#2b2418", "#3a3122", "#5b4d37", "#8a755b"] },
+      "lifted-panel": { "role": "neutral", "displayName": "Lifted Panel", "canonical": "#1b1712", "tonalRamp": ["#161310", "#1b1712", "#211c15", "#2a241b", "#352d22", "#443a2c", "#5d5040", "#7c6e5d"] },
+      "lifted-panel-2": { "role": "neutral", "displayName": "Lifted Panel 2", "canonical": "#201b15", "tonalRamp": ["#1a1611", "#201b15", "#262019", "#2e271e", "#383124", "#463d2e", "#5f5341", "#7e715f"] },
+      "warm-off-white": { "role": "neutral", "displayName": "Warm Off-White", "canonical": "#f0e9dc", "tonalRamp": ["#242019", "#4a443a", "#6f6555", "#8d8372", "#bdb3a1", "#f0e9dc", "#f5f0e6", "#faf6ef"] },
+      "column-secondary": { "role": "neutral", "displayName": "Column Secondary", "canonical": "#bdb3a1", "tonalRamp": ["#353028", "#56503f", "#74694f", "#9c9179", "#bdb3a1", "#d5cdbf", "#e3ddd2", "#efeae2"] },
+      "stone-mute": { "role": "neutral", "displayName": "Stone Mute", "canonical": "#8d8372", "tonalRamp": ["#2d2a23", "#4a453b", "#665f52", "#8d8372", "#a89f8f", "#c0b8a9", "#d4cdc2", "#e4e0d8"] },
+      "hairline": { "role": "border", "displayName": "Hairline", "canonical": "rgba(240, 233, 220, 0.12)", "tonalRamp": ["rgba(240,233,220,0.04)", "rgba(240,233,220,0.12)", "rgba(240,233,220,0.18)", "rgba(240,233,220,0.26)", "rgba(240,233,220,0.34)", "rgba(240,233,220,0.5)", "rgba(240,233,220,0.66)", "rgba(240,233,220,0.86)"] },
+      "hairline-strong": { "role": "border", "displayName": "Hairline Strong", "canonical": "rgba(240, 233, 220, 0.26)", "tonalRamp": ["rgba(240,233,220,0.08)", "rgba(240,233,220,0.18)", "rgba(240,233,220,0.26)", "rgba(240,233,220,0.38)", "rgba(240,233,220,0.5)", "rgba(240,233,220,0.66)", "rgba(240,233,220,0.82)", "rgba(240,233,220,0.94)"] },
+      "desert-gold": { "role": "primary", "displayName": "Desert Gold", "canonical": "#e3a72c", "tonalRamp": ["#3d2c03", "#57400a", "#72530c", "#8d6710", "#b3881a", "#e3a72c", "#f0c266", "#f7dd9a"] },
+      "gold-text": { "role": "primary", "displayName": "Gold Text", "canonical": "#e6b45a", "tonalRamp": ["#42300a", "#5d450f", "#785a12", "#95701a", "#c29134", "#e6b45a", "#f0cd88", "#f8e3b5"] },
+      "route-teal": { "role": "secondary", "displayName": "Route Teal (Key of Life / GUARDIAN)", "canonical": "#56c9ab", "tonalRamp": ["#12443a", "#1c6052", "#267d6a", "#33a186", "#43bd9d", "#56c9ab", "#8adfc9", "#c0f0e3"] },
+      "route-gold": { "role": "secondary", "displayName": "Route Gold (Eye of the Sands / SUNSTRUCK)", "canonical": "#dda53e", "tonalRamp": ["#42310a", "#5d460f", "#785b10", "#96711c", "#be9126", "#dda53e", "#eac27a", "#f5dcae"] },
+      "route-ember": { "role": "secondary", "displayName": "Route Ember (Solarium / COLOSSUS)", "canonical": "#e07a4a", "tonalRamp": ["#481d0d", "#662b11", "#843b17", "#a44b1c", "#c56129", "#e07a4a", "#ec9d7a", "#f5c3ab"] },
+      "route-steel": { "role": "secondary", "displayName": "Route Steel (Adamantine / FOREMAN)", "canonical": "#89a8d8", "tonalRamp": ["#1c2c47", "#273f63", "#33507c", "#486ba0", "#6489bd", "#89a8d8", "#adc3e4", "#cfdff2"] },
+      "specimen-tile": { "role": "neutral", "displayName": "Specimen Tile", "canonical": "#26201a", "tonalRamp": ["#1d1813", "#26201a", "#2d261f", "#372e25", "#42372c", "#524536", "#6f5d47", "#948067"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The h1 thesis line — one per page, authored lines kept whole by a 21ch measure." },
-      "stop-head": { "displayName": "Stop Head", "purpose": "Numbered section openers 01-06 above the double rule." },
-      "route-name": { "displayName": "Route Name", "purpose": "The four setup plates, colored by mineral key at large text." },
-      "body": { "displayName": "Body", "purpose": "The binding hyperlegible reading column; running text measure 40-46rem." },
-      "label": { "displayName": "Label", "purpose": "Table heads, tags, stop codes — always uppercase, positive tracking." },
-      "folio": { "displayName": "Folio", "purpose": "Footlines, prices, minor notes in Dust." }
+      "display": { "displayName": "Display", "purpose": "The h1 thesis and every exhibit name; variable grotesque with tracked caps at 640." },
+      "headline": { "displayName": "Headline", "purpose": "Numbered stop titles (01–06) over a hairline rule at 600." },
+      "title": { "displayName": "Title", "purpose": "Build names and exhibit titles at 600." },
+      "body": { "displayName": "Body", "purpose": "The reading column — Atkinson Hyperlegible is a binding accessibility commitment." },
+      "label": { "displayName": "Label", "purpose": "Wayfinding, table heads, plate tags and captions; uppercase, tracked, at the variable face's 560." }
     },
-    "shadows": [],
+    "shadows": [
+      { "name": "book-end-seam", "value": "inset 3px 0 0 #e3a72c", "purpose": "The single sanctioned shadow mark: a gold seam on the reserved exhibit row's first cell, read as a book-end tick, not depth." }
+    ],
     "motion": [
-      { "name": "set-out", "value": "0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; staggered 60ms per hero child", "purpose": "The one authored entrance — the board sets out from visible default; disabled under prefers-reduced-motion." },
-      { "name": "stamp-spin", "value": "30s linear infinite on .stamp .stamp-g (transform-box: view-box)", "purpose": "Ambient colophon seal rotation, contained inside its SVG viewBox." }
+      { "name": "seal-spin", "value": "36s linear infinite (transform rotate; prefers-reduced-motion guards it)", "purpose": "The world's one authored moment: the colophon seal's slow ring rotation." },
+      { "name": "state-transition", "value": "160–200ms ease (border-color, background, filter)", "purpose": "Default easing for hover state transitions on chips, plates, and exhibits." },
+      { "name": "smooth-scroll", "value": "html scroll-behavior smooth, only when prefers-reduced-motion allows", "purpose": "Anchor travel through the numbered stops." }
     ],
     "breakpoints": [
-      { "name": "cols", "value": "760px", "purpose": "Two-column grids stack to one." },
-      { "name": "table", "value": "700px", "purpose": "Ledger cell padding tightens; tables overflow-x scroll." },
-      { "name": "colophon", "value": "560px", "purpose": "Footer stacks and centers the stamp." }
+      { "name": "exhibits", "value": "980px", "purpose": "Exhibit figures and captions stack." },
+      { "name": "splits", "value": "860px", "purpose": "Two-column splits collapse." },
+      { "name": "tables", "value": "760px", "purpose": "Tables and chip grids re-grid; tables scroll horizontally; triptych frames go 16/6." },
+      { "name": "stack", "value": "560px", "purpose": "Masthead, plates (2×2), build heads and colophon stack." }
     ]
   },
   "components": [
     {
-      "name": "Route Plate",
+      "name": "Ledger Table",
+      "kind": "custom",
+      "refersTo": "ledger-table",
+      "description": "Hairline-ruled data table with tracked caps head row and tabular figures — the whole guide's data voice.",
+      "html": "<div class=\"ds-ledger\"><table><thead><tr><th>Target</th><th>Effect</th><th>Odds @1</th><th>My expected</th></tr></thead><tbody><tr><td>Diamond</td><td>×1.35</td><td>2.5%</td><td>~60</td></tr><tr><td>Granite</td><td>×1.36, +24 Dig str</td><td>1.2%</td><td>~100</td></tr></tbody></table></div>",
+      "css": ".ds-ledger table { width: 100%; border-collapse: collapse; background: transparent; } .ds-ledger th { font-family: 'Archivo Variable', Archivo, system-ui, sans-serif; font-weight: 560; font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: #8d8372; text-align: left; padding: 0.75rem 0.85rem; border-bottom: 1px solid rgba(240, 233, 220, 0.26); white-space: nowrap; } .ds-ledger td { padding: 0.8rem 0.85rem; border-bottom: 1px solid rgba(240, 233, 220, 0.12); vertical-align: top; color: #f0e9dc; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; font-size: 1rem; font-variant-numeric: tabular-nums; } .ds-ledger tr:last-child td { border-bottom: none; }"
+    },
+    {
+      "name": "Reserved Exhibit Row",
+      "kind": "custom",
+      "refersTo": "reserved-row",
+      "description": "Each table family's single arrival answer: gold wash, gold hairlines, 3px inset seam — one per family, never more.",
+      "html": "<div class=\"ds-ledger ds-res\"><table><tbody><tr class=\"ds-inv\"><td>Prismatic</td><td>×1.6 universal</td><td>0.56%</td><td><strong>~61 at 8 stones</strong> (Rainbow event, 13%)</td></tr></tbody></table></div>",
+      "css": ".ds-res table { width: 100%; border-collapse: collapse; background: #14110d; } .ds-res td { padding: 0.8rem 0.85rem; background: rgba(227, 167, 44, 0.1); border-top: 1px solid rgba(227, 167, 44, 0.35); border-bottom: 1px solid rgba(227, 167, 44, 0.35); color: #f0e9dc; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; font-variant-numeric: tabular-nums; } .ds-res td:first-child { box-shadow: inset 3px 0 0 #e3a72c; font-weight: 700; } .ds-res strong { color: #e6b45a; }"
+    },
+    {
+      "name": "Build Chip",
       "kind": "chip",
-      "refersTo": "route-plate",
-      "description": "The four setup routes as squared timetable plates: mineral dot + condensed caps name + hairline body tag.",
-      "html": "<a class=\"ds-route-plate\"><i class=\"ds-dot ds-dot-guardian\"></i>GUARDIAN<i class=\"ds-chip-tag\">Luck + Capacity</i></a>",
-      "css": ".ds-route-plate { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.85rem; border: 1px solid #4a4133; border-radius: 3px; color: #211a10; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 0.98rem; letter-spacing: 0.05em; text-decoration: none; background: #fbf7ee; } .ds-route-plate:hover { background: #f2ebdc; border-color: #211a10; } .ds-dot { width: 8px; height: 8px; border-radius: 1px; display: inline-block; } .ds-dot-guardian { background: #1f6e60; } .ds-chip-tag { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 400; font-size: 0.8rem; color: #6e6353; border-left: 1px solid rgba(33,26,16,0.22); padding-left: 0.55rem; font-style: normal; }"
+      "refersTo": "build-chip",
+      "description": "The four setup plates in the hero: real specimen tile, tracked caps name, route tick, quiet hairline border.",
+      "html": "<a class=\"ds-chip\" href=\"#guardian\"><img src=\"data:image/gif;base64,R0lGODlhAQABAAAAACw=\" alt=\"\" aria-hidden=\"true\"><span><span class=\"ds-chip-name\"><i class=\"ds-dot\"></i>GUARDIAN</span><span class=\"ds-chip-tag\">Luck + Capacity</span></span></a>",
+      "css": ".ds-chip { display: flex; align-items: center; gap: 0.65rem; background: rgba(27, 23, 18, 0.82); border: 1px solid rgba(240, 233, 220, 0.12); border-radius: 4px; padding: 0.6rem 0.75rem; text-decoration: none; transition: border-color 160ms ease, background 160ms ease; } .ds-chip:hover { border-color: rgba(240, 233, 220, 0.26); background: rgba(32, 27, 21, 0.92); } .ds-chip img { width: 38px; height: 38px; object-fit: contain; flex: none; background: #26201a; border-radius: 3px; padding: 3px; box-sizing: border-box; filter: brightness(1.28) contrast(1.05) saturate(1.06); } .ds-chip-name { display: flex; align-items: center; font-family: 'Archivo Variable', Archivo, system-ui, sans-serif; font-weight: 640; font-size: 0.82rem; letter-spacing: 0.055em; color: #f0e9dc; } .ds-dot { width: 10px; height: 10px; border-radius: 2px; background: #56c9ab; margin-right: 0.45em; flex: none; } .ds-chip-tag { display: block; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; font-size: 0.72rem; color: #8d8372; line-height: 1.35; }"
     },
     {
-      "name": "Fares Sheet Row",
-      "kind": "custom",
-      "refersTo": "departure-row",
-      "description": "Ledger rows: hairline rules, tabular numerals; highlighted endcaps take the departure tint + gold stop-tab; the reserved row inverts.",
-      "html": "<table class=\"ds-ledger\"><tbody><tr><td>Ordinary row</td><td>+13%</td></tr><tr class=\"ds-hi\"><td>Key of Life</td><td>+88%</td></tr></tbody></table>",
-      "css": ".ds-ledger { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; font-size: 0.94rem; line-height: 1.5; } .ds-ledger td { padding: 0.78rem 0.8rem; border-bottom: 1px solid rgba(33,26,16,0.12); color: #211a10; background: #fbf7ee; } .ds-ledger .ds-hi td { background: #e9dfc8; color: #4a4133; border-bottom-color: rgba(33,26,16,0.28); } .ds-ledger .ds-hi td:first-child { box-shadow: inset 3px 0 0 #e3a72c; color: #211a10; font-weight: 700; }"
+      "name": "Wayfinding Link (masthead)",
+      "kind": "nav",
+      "refersTo": "label",
+      "description": "Numbered stop link in the slim sticky masthead: gold numeral, lowered muted label, cut text as the overflow cue.",
+      "html": "<div class=\"ds-jump\"><a class=\"ds-jump-a\" href=\"#answers\"><i>01</i> One-line answers</a><a class=\"ds-jump-a\" href=\"#ladders\"><i>02</i> The mineral ladders</a></div>",
+      "css": ".ds-jump { display: flex; gap: 1.25rem; overflow-x: auto; scrollbar-width: none; } .ds-jump-a { font-family: 'Archivo Variable', Archivo, system-ui, sans-serif; font-weight: 560; font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: #8d8372; text-decoration: none; white-space: nowrap; padding: 0.35rem 0; } .ds-jump-a:hover { color: #f0e9dc; } .ds-jump-a i { font-style: normal; font-size: 0.62rem; margin-right: 0.45em; color: #e3a72c; } .ds-jump-a:focus-visible { outline: 2px solid #e3a72c; outline-offset: 3px; border-radius: 2px; }"
     },
     {
-      "name": "Reserved Row",
+      "name": "Exhibit Figure",
       "kind": "custom",
-      "refersTo": "reserved-row",
-      "description": "The single full inversion: paper numerals on press ink with a gold stop-tab — used at most twice on the page.",
-      "html": "<table class=\"ds-ledger\"><tbody><tr class=\"ds-inv\"><td>Prismatic</td><td>~185 expected — ~61 in a Rainbow window</td></tr></tbody></table>",
-      "css": ".ds-ledger { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; font-size: 0.94rem; } .ds-ledger .ds-inv td { background: #211a10; color: #fbf7ee; padding: 0.78rem 0.8rem; border-bottom: 1px solid transparent; } .ds-ledger .ds-inv td:first-child { box-shadow: inset 3px 0 0 #e3a72c; font-weight: 700; color: #e3a72c; }"
+      "refersTo": "headline",
+      "description": "Dimmed photographic exhibit with 4px mat and typed caption; hover returns the scene toward full light.",
+      "html": "<figure class=\"ds-exhibit\"><img src=\"data:image/gif;base64,R0lGODlhAQABAAAAACw=\" alt=\"The exhibit scene\" width=\"840\" height=\"360\"><figcaption><span class=\"ds-cap-name\">The Mutation Forge, Frozen Peak</span><span class=\"ds-cap-note\">one catalyst per equipment type</span></figcaption></figure>",
+      "css": ".ds-exhibit { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1.2rem; align-items: center; margin: 0 0 2rem; } .ds-exhibit img { width: 100%; height: auto; border-radius: 4px; filter: brightness(0.85) saturate(0.96); transition: filter 200ms ease; display: block; } .ds-exhibit:hover img { filter: brightness(0.95); } .ds-exhibit figcaption { color: #f0e9dc; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; font-size: 0.92rem; line-height: 1.5; } .ds-cap-name { display: block; } .ds-cap-note { display: block; color: #8d8372; font-size: 0.84rem; margin-top: 0.3rem; }"
     },
     {
-      "name": "Note Flag",
+      "name": "Signature Seal",
       "kind": "custom",
-      "refersTo": "route-plate",
-      "description": "Journal note and warning rows: sand field, hairline border, square route-color flag before the text.",
-      "html": "<p class=\"ds-note\"><i class=\"ds-flag\"></i><strong>Quest etiquette:</strong> state-as-mark note text follows the flag.</p>",
-      "css": ".ds-note { position: relative; padding: 0.9rem 1rem; background: #f2ebdc; border: 1px solid rgba(33,26,16,0.12); border-radius: 3px; color: #4a4133; max-width: 46rem; font-size: 0.95rem; } .ds-note strong { color: #211a10; } .ds-flag { display: inline-block; width: 8px; height: 8px; border-radius: 1px; margin-right: 0.5rem; vertical-align: 0.05em; background: #1f6e60; }"
-    },
-    {
-      "name": "Stop Head",
-      "kind": "custom",
-      "refersTo": "stop-head",
-      "description": "Numbered stop opener: heavy-thin double rule over a condensed caps heading with a gold stop chip.",
-      "html": "<h2 class=\"ds-stop\"><i class=\"ds-stopn\">03</i>Mutation lab</h2>",
-      "css": ".ds-stop { position: relative; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 2.2rem; letter-spacing: 0.015em; line-height: 1.04; color: #211a10; border-top: 3px solid #211a10; padding-top: 1rem; margin: 0; } .ds-stop::before { content: \"\"; position: absolute; top: 5px; left: 0; right: 0; height: 1px; background: #211a10; } .ds-stopn { display: inline-block; font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 0.62em; color: #6f4900; background: #e9dfc8; border-radius: 2px; padding: 0.25em 0.55em; letter-spacing: 0.06em; vertical-align: 0.28em; margin-right: 0.7em; font-style: normal; }"
-    },
-    {
-      "name": "Letterpress Stamp",
-      "kind": "custom",
-      "refersTo": "reserved-row",
-      "description": "The line's signature: a slowly rotating ink seal crediting the author, gold seal at center.",
-      "html": "<svg class=\"ds-stamp\" viewBox=\"0 0 120 120\" width=\"100\" height=\"100\" aria-hidden=\"true\"><defs><path id=\"ds-stamp-ring\" d=\"M60 60 m -45 0 a 45 45 0 1 1 90 0 a 45 45 0 1 1 -90 0\"/></defs><g class=\"ds-stamp-g\"><circle cx=\"60\" cy=\"60\" r=\"57\" fill=\"none\" stroke=\"#211a10\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"none\" stroke=\"#211a10\" stroke-width=\"1.25\"/><circle cx=\"60\" cy=\"60\" r=\"10\" fill=\"#e3a72c\"/><text fill=\"#211a10\" style=\"font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 2.4px;\"><textPath href=\"#ds-stamp-ring\" startOffset=\"0\">DESIGNED &amp; SIGNED · VXYZVIEW ·</textPath></text></g></svg>",
-      "css": ".ds-stamp { color: #211a10; } .ds-stamp-g { transform-origin: 50% 50%; transform-box: view-box; animation: ds-stamp-spin 30s linear infinite; } @keyframes ds-stamp-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } @media (prefers-reduced-motion: reduce) { .ds-stamp-g { animation: none; } }"
+      "refersTo": "display",
+      "description": "vxyzview's colophon seal: two rings, gold disc, rotating ring text. The world's one authored motion.",
+      "html": "<svg class=\"ds-seal\" viewBox=\"0 0 120 120\" width=\"104\" height=\"104\" aria-hidden=\"true\"><defs><path id=\"ds-seal-ring\" d=\"M60 60 m -45 0 a 45 45 0 1 1 90 0 a 45 45 0 1 1 -90 0\"/></defs><g class=\"ds-seal-g\"><circle cx=\"60\" cy=\"60\" r=\"57\" fill=\"none\" stroke=\"rgba(240,233,220,0.26)\" stroke-width=\"1.5\"/><circle cx=\"60\" cy=\"60\" r=\"30\" fill=\"none\" stroke=\"rgba(240,233,220,0.26)\" stroke-width=\"0.75\"/><circle cx=\"60\" cy=\"60\" r=\"11\" fill=\"#e3a72c\"/><text fill=\"rgba(240,233,220,0.7)\" font-size=\"10.5\" letter-spacing=\"2.4\" font-family=\"Archivo Variable, Archivo, sans-serif\" font-weight=\"580\"><textPath href=\"#ds-seal-ring\" startOffset=\"0\">DESIGNED &amp; SIGNED · VXYZVIEW ·</textPath></text></g></svg>",
+      "css": ".ds-seal { color: rgba(240, 233, 220, 0.7); } .ds-seal .ds-seal-g { transform-box: view-box; transform-origin: 60px 60px; animation: ds-spin 36s linear infinite; } @keyframes ds-spin { to { transform: rotate(360deg); } } @media (prefers-reduced-motion: reduce) { .ds-seal .ds-seal-g { animation: none; } }"
     }
   ],
   "narrative": {
-    "northStar": "The Sunscorched Desert Line — a printed timetable",
-    "overview": "The page is a transit wayfinding sheet for a game the reader actually works: every question is a departure, every table a fares-and-times sheet, and the author the line's operator. It refuses both flanking category defaults — the dark neon gamer dashboard it replaced, and the dry wiki table it differentiates from — by owning the reader's column from a warm paper-and-ink print frame while the reading column itself stays calm and standard. Flatness is law: sun-bleached paper ground, warm press ink, hairline rules, one ochre-gold line accent. Depth comes from rule weight, never from gradients, blurs, or halos.",
+    "northStar": "The Night-Room Specimen Catalog",
+    "overview": "The page is a museum exhibit hall visited after hours: warm near-black walls, a single gold accent lamp, and one lit exhibit row per case. Every answer the reader came for is a numbered exhibit with real specimens — mineral tiles, digsite scenes in dimmed frames, tables ruled like catalog drawers. It replaces the warm-paper transit-timetable world (2026-10-26 directive) and refuses both flanking category defaults: the retired light timetable and the generic dark neon gamer dashboard — no glow anywhere, no neon on dark, no gradient ornaments; the accent is a desert gold, not a signal color.\n\nDepth is physical, not simulated: hairline rule weight, panel lift from the ground, and photographic scrims where the subject's own light demands it. The reading column stays a plain, fast field guide — Atkinson Hyperlegible, wide measure, tabular numbers — while the catalog frame (numbers, caps, rules, seals) does the expressing.",
     "keyCharacteristics": [
-      "Timetable frame, standard reading column — the world owns masthead, rules, tables, and openers only.",
-      "Flat press color only; one accent plus four functional mineral keys.",
-      "Heavy-thin double rules above every stop; hairline ruled fares sheet.",
-      "Value-by-mark: stop-tabs, room flags, glyph marks, and exactly two reserved ink inversions.",
-      "No JavaScript, no build step; Atkinson Hyperlegible body and strong contrast are binding."
+      "Warm near-black ground that never goes pure black or blue-dark; warmth is the room's light.",
+      "One gold accent plus four route marks (teal / gold / ember / steel) used as marks only.",
+      "Numbered stops (01–06) on hairline rules; tabular figures in every data column.",
+      "Real specimens from the Official Prospecting! Wiki, credited file-by-file; dimmed scenes, one exhibit row per table family.",
+      "Nothing glows. Depth is rules, panel lift, and photographic necessity — never glow or glass."
     ],
     "rules": [
-      { "name": "The One Reserve Rule", "body": "A full ink inversion (paper text on Press Ink) is reserved for the row the reader came for — used at most twice on the whole page. Rarity is the point; anything more makes it wallpaper.", "section": "colors" },
-      { "name": "The Mark-Before-Hue Rule", "body": "Importance and state are drawn as marks first — gold stop-tabs, square note flags, geometric event glyphs — and the mineral color-coding rides on those marks. Never replace a mark with a hue field (and the side-stripe-on-content pattern is refused).", "section": "colors" },
-      { "name": "The Flat-Press Rule", "body": "Every fill is flat. No gradients of any kind, no blur or glass, no offset block shadows. Depth is rule weight: whisper hairlines for texture, 1px for row rules, 2-3px Press Ink for structure.", "section": "colors" },
-      { "name": "The Two-Family Rule", "body": "Two faces, two jobs, never swapped: condensed caps own the frame; Atkinson owns every sentence. Numbers in data columns set tabular-nums.", "section": "typography" }
+      { "name": "The One Book-End Rule", "body": "Each table family carries exactly one reserved exhibit row — the arrival answer — drawn as a 10% gold wash with 1px gold hairlines and a 3px inset gold seam on its first cell. Anything more makes the gold wallpaper.", "section": "colors" },
+      { "name": "The Mark-First Rule", "body": "Importance rides on marks — gold numerals, route dots, the seal — never on hue fields behind text. No colored side-stripes on cards, notes, or list items; content has no left ribbons.", "section": "colors" },
+      { "name": "The Nothing-Glows Rule", "body": "No text-shadow, no glow, no glass, no light effects on dark. The world is lit like a room, not like a terminal.", "section": "colors" },
+      { "name": "The Two-Family Rule", "body": "Two faces, two jobs, never swapped: the variable grotesque caps own the frame (numbers, labels, names); Atkinson owns every sentence. Data columns set `font-variant-numeric: tabular-nums`.", "section": "typography" }
     ],
     "dos": [
-      "Do keep every fill flat and every rule in the four weights (whisper / hairline / 2px / 3px ink); depth is rules, not effects.",
-      "Do set the four setups apart with the mineral keys — at AA contrast (>=4.5:1 as text) as dots, tabs, and route-name text, never as fields behind text.",
-      "Do reserve the full ink inversion for a single arrival row per table family, and set all data numerals tabular.",
-      "Do theme the browser chrome from the palette: selection (Signal Gold on ink), focus (2px solid Gold-Deep, 3px offset), thin dust scrollbars, gold summary markers.",
-      "Do open every numbered stop with the 3px+1px double rule and a gold stop-code chip; unnumbered interludes never carry codes."
+      "Do keep the ground warm always — #14110d umber, never #000, never blue-shifted; every panel one warm step above the wall.",
+      "Do reserve the gold exhibit row for a single arrival answer per table family, and set every data numeral tabular.",
+      "Do theme the browser chrome from the palette: gold selection, 2px gold focus ring, dark scrollbars, gold summary markers.",
+      "Do credit every wiki image file-by-file in Sources; all specimens are CC BY-NC-SA and their provenance ships inside the PNGs.",
+      "Do open numbered stops (01–06) with a strong hairline rule and a gold stop numeral; the number is the walking order (\"read top to bottom\"), not decoration."
     ],
     "donts": [
-      "Don't use any gradient, glass/blur, glow, or hard offset shadow — zero-gradient is a standing brief commitment, and the flat-press world is the enforcement.",
-      "Don't put colored side-stripes on content (cards, notes, list items): marks precede stripes; if a mark earns its place, draw the flag square instead.",
-      "Don't touch the author's first-person copy, the desert-marker convention, or any wiki-traced number without re-checking pinned revisions.",
-      "Don't introduce JavaScript, a build step, or new dependencies — plain HTML + one CSS file is the confirmed constraint.",
-      "Don't add eyebrows/kickers over headings; the masthead running head (the bordered schedule bar under the sticky bar) is the one sanctioned two-part opener, because it carries real departure information."
+      "Don't glow, glass, or neon on dark: no text-shadow, no blur, no gradient decoration on flat surfaces — gradients exist only as scrims over real photography.",
+      "Don't put colored fields behind text or side-stripes on content: route color rides as dots and tabs only.",
+      "Don't add eyebrows or kickers above headings; the masthead's event-clock wayfinding and the hero's event-clock fact are data lines, not labels — if a line stops carrying data, delete it.",
+      "Don't touch the author's first-person copy, the 🏜 desert-marker convention, or any wiki-traced number without re-checking pinned revisions (see PRODUCT.md bindings).",
+      "Don't fork the visual world into per-section variations; the catalog frame — numbers, rules, mats, seal — is one system across the whole guide."
     ]
   }
 }

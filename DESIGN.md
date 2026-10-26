@@ -1,39 +1,40 @@
 ---
 name: The Sunscorched Ledger
-description: Desert-line timetable design system for vxyzview's Prospecting! field guide — sun-bleached paper, warm press ink, hairline rules, flat color only.
+description: Night-room specimen catalog design system for vxyzview's Prospecting! field guide — warm near-black exhibit hall, hairline-ruled ledgers, one desert-gold accent, real wiki specimens. Replaced the warm-paper timetable world on 2026-10-26.
 colors:
-  bleached-paper: "#fbf7ee"
-  hot-sand: "#f2ebdc"
-  departure-tint: "#e9dfc8"
-  press-ink: "#211a10"
-  dust: "#6e6353"
-  desert-line-gold: "#8a5a00"
-  gold-deep: "#6f4900"
-  signal-gold: "#e3a72c"
-  oasis-teal: "#1f6e60"
-  solarium-gold: "#a87500"
-  fire-opal: "#a63e14"
-  adamantine-steel: "#44608a"
-  rule-hairline: "rgba(33, 26, 16, 0.22)"
-  rule-whisper: "rgba(33, 26, 16, 0.12)"
+  night-room-umber: "#14110d"
+  lifted-panel: "#1b1712"
+  lifted-panel-2: "#201b15"
+  warm-off-white: "#f0e9dc"
+  column-secondary: "#bdb3a1"
+  stone-mute: "#8d8372"
+  hairline: "rgba(240, 233, 220, 0.12)"
+  hairline-strong: "rgba(240, 233, 220, 0.26)"
+  desert-gold: "#e3a72c"
+  gold-text: "#e6b45a"
+  route-teal: "#56c9ab"
+  route-gold: "#dda53e"
+  route-ember: "#e07a4a"
+  route-steel: "#89a8d8"
+  specimen-tile: "#26201a"
 typography:
   display:
-    fontFamily: "Barlow Condensed, Arial Narrow, system-ui, sans-serif"
-    fontSize: "clamp(2.7rem, 8vw, 5rem)"
-    fontWeight: 700
+    fontFamily: "Archivo Variable, Archivo, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(2.55rem, 7.2vw, 4.7rem)"
+    fontWeight: 640
     lineHeight: 1.04
-    letterSpacing: "-0.005em"
-  stop-head:
-    fontFamily: "Barlow Condensed, Arial Narrow, system-ui, sans-serif"
-    fontSize: "clamp(1.7rem, 4.6vw, 2.4rem)"
-    fontWeight: 700
-    lineHeight: 1.04
-    letterSpacing: "0.015em"
-  route-name:
-    fontFamily: "Barlow Condensed, Arial Narrow, system-ui, sans-serif"
-    fontSize: "clamp(1.45rem, 3.6vw, 1.85rem)"
-    fontWeight: 700
-    lineHeight: 1.04
+    letterSpacing: "-0.012em"
+  headline:
+    fontFamily: "Archivo Variable, Archivo, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(1.55rem, 4.2vw, 2.1rem)"
+    fontWeight: 600
+    lineHeight: 1.12
+    letterSpacing: "0.012em"
+  title:
+    fontFamily: "Archivo Variable, Archivo, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(1.25rem, 3.1vw, 1.6rem)"
+    fontWeight: 600
+    lineHeight: 1.15
     letterSpacing: "0.02em"
   body:
     fontFamily: "Atkinson Hyperlegible, Segoe UI, system-ui, sans-serif"
@@ -41,153 +42,146 @@ typography:
     fontWeight: 400
     lineHeight: 1.65
   label:
-    fontFamily: "Barlow Condensed, Arial Narrow, system-ui, sans-serif"
-    fontSize: "0.78rem"
-    fontWeight: 700
+    fontFamily: "Archivo Variable, Archivo, Segoe UI, system-ui, sans-serif"
+    fontSize: "0.72rem"
+    fontWeight: 560
     lineHeight: 1.3
     letterSpacing: "0.09em"
-  folio:
-    fontFamily: "Atkinson Hyperlegible, Segoe UI, system-ui, sans-serif"
-    fontSize: "0.86rem"
-    fontWeight: 400
-    lineHeight: 1.5
 rounded:
-  press: "3px"
-  mark: "1px"
+  plate: "4px"
+  tile: "3px"
+  focus: "2px"
 spacing:
-  section: "clamp(2.8rem, 6.5vw, 4.5rem)"
-  column-pad: "clamp(1rem, 4vw, 2rem)"
+  column: "66rem"
+  column-pad: "clamp(1.1rem, 4vw, 2.2rem)"
+  section: "clamp(3.2rem, 8vw, 5.5rem)"
 components:
-  route-plate:
-    backgroundColor: "{colors.bleached-paper}"
-    textColor: "{colors.press-ink}"
-    rounded: "{rounded.press}"
-    padding: "0.5rem 0.85rem"
-  departure-row:
-    backgroundColor: "{colors.departure-tint}"
-    textColor: "{colors.dust}"
-    padding: "0.78rem 0.8rem"
+  ledger-table:
+    backgroundColor: "{colors.night-room-umber}"
+    textColor: "{colors.warm-off-white}"
+    padding: "0.8rem 0.85rem"
   reserved-row:
-    backgroundColor: "{colors.press-ink}"
-    textColor: "{colors.bleached-paper}"
-    padding: "0.78rem 0.8rem"
+    backgroundColor: "rgba(227, 167, 44, 0.1)"
+    textColor: "{colors.gold-text}"
+    padding: "0.8rem 0.85rem"
+  build-chip:
+    backgroundColor: "rgba(27, 23, 18, 0.82)"
+    textColor: "{colors.warm-off-white}"
+    rounded: "{rounded.plate}"
+    padding: "0.6rem 0.75rem"
 ---
 
 # Design System: The Sunscorched Ledger
 
 ## Overview
 
-**Creative North Star: "The Sunscorched Desert Line — a printed timetable"**
+**Creative North Star: "The Night-Room Specimen Catalog"**
 
-The page is a transit wayfinding sheet for a game the reader actually works: every question is a departure, every table a fares-and-times sheet, and the author the line's operator. It refuses both flanking category defaults — the dark neon gamer dashboard it replaced, and the dry wiki table it differentiates from — by owning the reader's column from a warm paper-and-ink print frame while the reading column itself stays calm and standard.
+The page is a museum exhibit hall visited after hours: warm near-black walls, a single gold accent lamp, and one lit exhibit row per case. Every answer the reader came for is a numbered exhibit with real specimens — mineral tiles behind glass-like tiles, digsite scenes in dimmed frames, tables ruled like catalog drawers. It replaces the warm-paper transit-timetable world (2026-10-26 directive) and refuses both flanking category defaults: the retired light timetable and the generic dark neon gamer dashboard — no glow anywhere, no neon on dark, no gradient ornaments; the accent is a desert gold, not a signal color.
 
-Flatness is law: sun-bleached paper ground, warm press ink, hairline rules, one ochre-gold line accent. Depth comes from rule weight, never from gradients, blurs, or halos. Markdown sections carry the reading, type leads wayfinding, and the reader's success is instant: which mineral, where, at what odds, with the work shown.
+Depth is physical, not simulated: hairline rule weight, panel lift from the ground, and photographic scrims where the subject's own light demands it. The reading column stays a plain, fast field guide — Atkinson Hyperlegible, wide measure, tabular numbers — while the catalog frame (numbers, caps, rules, seals) does the expressing.
 
 **Key Characteristics:**
-- Timetable frame, standard reading column — the world owns masthead, rules, tables, and openers only.
-- Flat press color only; one accent plus four functional mineral keys.
-- Heavy-thin double rules above every stop; hairline ruled fares sheet.
-- Value-by-mark: stop-tabs, room flags, glyph marks, and exactly two reserved ink inversions.
-- No JavaScript, no build step; Atkinson Hyperlegible body and strong contrast are binding.
+- Warm near-black ground that never goes pure black or blue-dark; warmth is the room's light.
+- One gold accent plus four route marks (teal / gold / ember / steel) used as marks only.
+- Numbered stops (01–06) on hairline rules; tabular figures in every data column.
+- Real specimens from the Official Prospecting! Wiki, credited file-by-file; dimmed scenes, one exhibit row per table family.
+- Nothing glows. Depth is rules, panel lift, and photographic necessity — never glow or glass.
 
 ## Colors
 
-The palette is sun-bleached print: a warm paper ground (never sterile white), warm umber ink, dust mute tones, and a single desert-line gold — with four deepened mineral keys used strictly as marks for the guide's four setups.
+The palette is lit by one warm lamp: umber walls, off-white text, stone-gray narration, and desert gold reserved for the thing a visitor walks toward.
 
 ### Primary
-- **Desert-Line Gold** (#8a5a00): the line's text accent — links, route-name text for the SUNSTRUCK plate, stop-code numerals. Chosen dark enough to pass AA in body sizes on paper.
-- **Signal Gold** (#e3a72c): the accent as a mark — stop-tabs, the stamp seal, focus elements; a fill, never body text.
+- **Desert Gold** (#e3a72c): the accent as a mark — stop numerals, route dots, the seal's disc, selection fill, focus ring, the reserved-row seam. A fill, never running text.
+- **Gold Text** (#e6b45a): gold when it must be read — links, reserved-row strongs; tuned to pass AA on the umber ground.
 
 ### Secondary
-- **Oasis Teal** (#1f6e60), **Solarium Gold** (#a87500), **Fire Opal** (#a63e14), **Adamantine Steel** (#44608a): the four route keys for GUARDIAN / SUNSTRUCK / COLOSSUS / FOREMAN, each tied to the setup's signature mineral. They appear as route dots, plate tabs, and large route-name text — never as tinted fields.
+- **Route Teal / Route Gold / Route Ember / Route Steel** (#56c9ab / #dda53e / #e07a4a / #89a8d8): the four setups keyed to their signature minerals (Key of Life, Eye of the Sands, Solarium, Adamantine). Marks only — dots, plate tabs; never fields behind text.
 
 ### Neutral
-- **Bleached Paper** (#fbf7ee): the page ground — warm on purpose, drifting from sterile white.
-- **Hot Sand** (#f2ebdc): alternating panel bands (primer, mutation lab), self-explanatory side note fields.
-- **Departure Tint** (#e9dfc8): highlighted "endcap" rows and stop-code chips.
-- **Press Ink** (#211a10): all primary text and every heavy rule; the reserved-row inversion ground.
-- **Dust** (#6e6353): running narration, prices, footlines; ink-2 (#4a4133) as the darker secondary where dust would sit on sand.
-- **Rule Hairline** (rgba(33,26,16,.22)) and **Rule Whisper** (rgba(33,26,16,.12)): the ruled-sheet texture.
+- **Night-Room Umber** (#14110d): the page ground. Warm brown-black on purpose; never pure #000, never blue-dark.
+- **Lifted Panel / Lifted Panel 2** (#1b1712 / #201b15): plates, exhibit mats, chips — surfaces one step off the wall.
+- **Warm Off-White** (#f0e9dc): the column's light — headings and strong text.
+- **Column Secondary** (#bdb3a1): running narration, ledes (≈9:1 on ground).
+- **Stone Mute** (#8d8372): captions, footlines, wayfinding at rest (≥4.5:1 on ground).
+- **Hairline / Hairline Strong** (rgba(240,233,220,.12) / .26): the ruled-drawer texture — row rules, box borders, structure lines.
 
 ### Named Rules
-**The One Reserve Rule.** A full ink inversion (paper text on Press Ink) is reserved for the row the reader came for — used at most twice on the whole page ("Best mutation" in the answers, "Prismatic" in the lab). Rarity is the point; anything more makes it wallpaper.
+**The One Book-End Rule.** Each table family carries exactly one reserved exhibit row — the arrival answer — drawn as a 10% gold wash with 1px gold hairlines and a 3px inset gold seam on its first cell. Anything more makes the gold wallpaper.
 
-**The Mark-Before-Hue Rule.** Importance and state are drawn as marks first — gold stop-tabs, square note flags, geometric event glyphs — and the mineral color-coding rides on those marks. Never replace a mark with a hue field (and the side-stripe-on-content pattern is refused).
+**The Mark-First Rule.** Importance rides on marks — gold numerals, route dots, the seal — never on hue fields behind text. No colored side-stripes on cards, notes, or list items; content has no left ribbons.
 
-**The Flat-Press Rule.** Every fill is flat. No gradients of any kind, no blur or glass, no offset block shadows. Depth is rule weight: whisper hairlines for texture, 1px for row rules, 2–3px Press Ink for structure.
+**The Nothing-Glows Rule.** No text-shadow, no glow, no glass, no light effects on dark. The world is lit like a room, not like a terminal.
 
 ## Typography
 
-**Display Font:** Barlow Condensed (with Arial Narrow fallback) — a sourced transport-register condensed grotesque; always uppercase for wayfinding roles
-**Body Font:** Atkinson Hyperlegible (with Segoe UI fallback) — binding accessibility commitment for the whole reading column
-**Watch a fallback pitfall:** both faces load from Google Fonts; keep the local stacks as printed above.
+**Display Font:** Archivo Variable (with Archivo / system fallback) — self-hosted via @fontsource; the wght axis is used directly (560–650)
+**Body Font:** Atkinson Hyperlegible (with Segoe UI fallback) — binding accessibility commitment inherited from the incumbent system, carried through the React build
 
-**Character:** A station-signage condensed voice stamps the frame (masthead, stops, table heads, labels — always with positive letter-spacing), while the hyperlegible humanist body keeps the column quiet, wide-open, and legible on any phone.
+**Character:** A tracked-grotesque museum-plaque voice numbers the exhibit hall and names its cases; the hyperlegible humanist body keeps every sentence legible on any phone in a dark room.
 
 ### Hierarchy
-- **Display** (700, clamp(2.7rem, 8vw, 5rem), lh 1.04): the h1 thesis line, one per page, ≤21ch so authored lines stay whole.
-- **Stop Head** (700, clamp(1.7rem–2.4rem), lh 1.04): numbered section openers (01–06), set under a 3px+1px double rule.
-- **Route Name** (700, clamp(1.45rem–1.85rem), lh 1.04): GUARDIAN / SUNSTRUCK / COLOSSUS / FOREMAN, colored by their route key.
-- **Body** (400, 1.0625rem, lh 1.65): the reading column; running text maxes at 40–46rem depending on role — measure discipline, not container width.
-- **Label** (700, .78rem, letter-spacing .09em, uppercase): table heads, catalog chips, tags; running head uses .12em at .78rem.
-- **Folio** (400, .86rem): footlines, prices inside tables, minor notes — always Dust or ink-2.
+- **Display** (640, clamp(2.55rem, 7.2vw, 4.7rem), lh 1.04, −0.012em): the h1 thesis, ≤15ch so its three short sentences stay whole.
+- **Headline** (600, clamp(1.55rem–2.1rem), lh 1.12): numbered stop titles (01–06) set above a hairline rule.
+- **Title** (600, clamp(1.25rem–1.6rem), lh 1.15): build names (GUARDIAN…), exhibit names.
+- **Body** (400, 1.0625rem, lh 1.65): the reading column; running text self-limits 40–52rem by role, never by container.
+- **Label** (560, .72rem, +.09em, uppercase): wayfinding, table heads, plate tags, captions at plaque distance.
+- **Caption/footline steps** (deliberate graduated micro-scale under Caption roles, rem): 0.62 (stop numerals) · 0.66 (plate tags at 560px) · 0.72–0.78 (plate tags, captions, table caps) · 0.8–0.84 (prices, notes, credits) · 0.85–0.89 (captions, footlines) · 0.92–0.98 (exhibit captions, summaries on small screens) — each step is mobile-adapted from its base size; not stray values.
 
 ### Named Rules
-**The Two-Family Rule.** Two faces, two jobs, never swapped: condensed caps own the frame; Atkinson owns every sentence. Numbers in data columns set `font-variant-numeric: tabular-nums`.
+**The Two-Family Rule.** Two faces, two jobs, never swapped: the variable grotesque caps own the frame (numbers, labels, names); Atkinson owns every sentence. Data columns set `font-variant-numeric: tabular-nums`.
 
 ## Layout
 
-One centered 62rem column with fluid side pads (clamp(1rem, 4vw, 2rem)); reading text self-limits to 40–46rem. Sections run as numbered stops (01–06) between which the mineral ladders and the runes primer sit as unnumbered interludes. Vertical rhythm: section padding clamp(2.8rem, 6.5vw, 4.5rem), more space above a heading than below, and every h2 opens under its double rule. Full-bleed sand bands (primer, lab) alternate the rhythm; data tables overflow horizontally (`overflow-x: auto`, thin dust scrollbar). Text columns stack under 760px; table cells tighten under 700px; the colophon stacks and centers under 560px.
+One centered 66rem column with fluid side pads (clamp(1.1rem, 4vw, 2.2rem)); a slim sticky masthead carries brand left and numbered wayfinding right over a hairline rule. Sections are numbered stops; their closers step down (`section + section` at 0.55× the section gap). Reading measures are role-set (40rem hero sub, 44rem primer, 46rem ledes/derivation, 50rem chips, 52rem builds/sources). Data tables exceed their measure and scroll horizontally (`overflow-x: auto`, hidden scrollbar) on narrow viewports. Breakpoints: panels and exhibits collapse at 980px, splits at 860px, tables/chips re-grid at 760px, masthead/plates/colophon stack at 560px.
 
 ## Elevation & Depth
 
-No shadows. The design is flat press work: depth is expressed entirely through rule weight (whisper hairline → hairline → 2px ink → 3px ink), sand band alternation, and the reserved ink inversion. The only non-border "marks" are zero-offset inset stop-tabs on highlighted row cells, which read as timetable ticks, not shadows. Text selection is Signal Gold on ink; focus is a 2px Gold-Deep solid outline, 3px offset.
+No shadows as depth. Surfaces lift one step (#1b1712 on #14110d) and rules carry hierarchy — whisper hairlines for texture, 1px for rows, strong hairlines (0.26 alpha) for frame lines. The only box-shadow in the system is a 3px inset gold seam on a reserved row's first cell, drawn as a book-end tick, not a shadow. Photographic material keeps its own depth through scrims (radial/linear darkening gradients are photographic necessity over real screenshots, sanctioned by the contract; they never decorate flat surfaces). Text selection is gold on ink; focus is a 2px gold outline, 3px offset.
 
 ## Shapes
 
-Squared print geometry: small radii only (3px on plates and fields, 1px on marks) — pills are refused; chips are rectangles. Recurring geometry: the 3px+1px double rule, square route dots (8px), square route tabs, triangle/parallelogram event glyphs drawn in CSS, and two concentric circles with a gold seal — the colophon stamp, rotated from inside its own SVG viewBox so it never escapes its box.
+Quiet squared geometry: 4px radius on plates, chips, exhibits; 3px on specimen tiles and small mats; focus rings 2px with a 2px corner radius. Pills are refused. Recurring geometry: the numbered stop's hairline under-rule, square route dots (10px), the triptych's 21/9 dimmed frames (16/6 on phones), and the 104px signature seal — a two-ring circle with a gold disc and ring text ("DESIGNED & SIGNED · VXYZVIEW ·"), rotating slowly inside its own SVG viewBox.
 
 ## Components
 
 ### Masthead (top bar)
-- **Shape:** full-width sticky bar, 2px Press Ink bottom rule, no blur.
-- **Brand:** display 700 caps at 1.06rem; author chip as a 1px hairline rectangle (3px radius), Gold-Deep small caps.
-- **Wayfinding:** display 600 caps at .9rem, letter-spacing .09em, Dust; each link carries its gold stop code; hover returns Ink; horizontal scroll on narrow screens.
+- **Shape:** full-width sticky bar, hairline-strong bottom rule, ground-transparent over the scene.
+- **Brand:** display 650 caps at 0.95rem; author token in stone mute, lower-contrast.
+- **Wayfinding:** display 560 caps at 0.72rem (+.09em), gold stop numerals, muted labels; hover raises to ink; horizontal scroll with cut text as the overflow cue.
 
-### Route Plates (chips)
-- **Shape:** 1px ink-2 border, 3px radius, paper ground, padding .5rem/.85rem.
-- **Content:** 8px square mineral dot + display 700 caps route name + hairline-separated body tag.
-- **Hover / Focus:** sand fill, ink border; focus ring as above.
+### Ledger (tables)
+- **Shape:** full-width; head row in tracked caps 0.72rem stone-mute over a strong hairline; body rows ruled by hairlines, last row open; numerals tabular.
+- **Reserved row:** 10% gold wash, 1px gold hairlines, 3px inset gold seam on the first cell, gold-text strongs/links.
+- **Mineral cell:** inline 30px specimen tile before the name; rarity as a muted sub-line.
 
-### Fares Sheet (ledger tables)
-- **Shape:** full-width, collapse-ruled; head row framed by 2px ink top and bottom rules; row rules are whisper hairlines closing in a 2px ink end rule.
-- **Status vocabulary:** highlighted rows (Departure Tint + gold stop-tab + ink-2 text on sand); reserved row (full Press Ink inversion, Signal Gold link); the four setups' pieces sheets lose any row stripe and keep route identity in headers alone.
-- **Numerals:** tabular-nums everywhere; prices are Folio-style beneath the mineral name.
+### Build Chip (plates)
+- **Shape:** 1px hairline border, 4px radius, lifted-panel ground (82% alpha over scene), icon tile 38px on #26201a, name in display 640 caps 0.82rem (+.055em), tick after the setup name.
+- **Hover / Focus:** border and ground lift; focus ring as above.
 
-### Row Flags (warn / build-note)
-- **Shape:** sand field, 1px whisper border, 3px radius; an 8px square flag in the route color (Open Ember for the hard warning) precedes strong text.
-- **State:** plain paper ground with a lone square flag replaces any colored left edge; text follows in ink-2 with ink strongs.
+### Exhibit (scenes)
+- **Shape:** photographic figure with a 4px mat and, beside it, a typed caption — name in body, note in stone mute. Scenes dim to ~0.82 brightness with a hover return toward full.
 
 ### Workings (details/summary)
-- **Style:** display 600 (.95–1.12rem) caps summaries with Gold-Deep markers; bill lists at 0.93rem in ink-2 on open.
-- **Plate numbering:** workings carry W1–W5 chips (1px hairline rectangle, Gold-Deep display 700).
+- **Style:** display 580 caps summaries at 0.9–1.1rem with gold markers; open bills read in column-secondary at 0.93rem; native `<details>` behavior, no JS needed.
 
-### Stamp (signature)
-- **Shape:** 116px letterpress seal — 2.5px ink ring, thin inner ring, Signal Gold center disc, ring text "DESIGNED & SIGNED · VXYZVIEW ·" in display caps.
-- **Motion:** 30s linear rotation of the inner group (`transform-box: view-box`), disabled under prefers-reduced-motion.
+### Signature Seal (colophon)
+- **Shape:** 104px two-ring seal; gold disc center; ring text in tracked display caps.
+- **Motion:** the one authored moment — a 36s linear ring rotation, disabled under prefers-reduced-motion.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep every fill flat and every rule in the four weights (whisper / hairline / 2px / 3px ink); depth is rules, not effects.
-- **Do** set the four setups apart with the mineral keys — at AA contrast (≥4.5:1 as text) as dots, tabs, and route-name text, never as fields behind text.
-- **Do** reserve the full ink inversion for a single arrival row per table family, and set all data numerals tabular.
-- **Do** theme the browser chrome from the palette: selection (Signal Gold on ink), focus (2px solid Gold-Deep, 3px offset), thin dust scrollbars, gold summary markers.
-- **Do** open every numbered stop with the 3px+1px double rule and a gold stop-code chip; unnumbered interludes never carry codes.
+- **Do** keep the ground warm always — #14110d umber, never #000, never blue-shifted; every panel one warm step above the wall.
+- **Do** reserve the gold exhibit row for a single arrival answer per table family, and set every data numeral tabular.
+- **Do** theme the browser chrome from the palette: gold selection, 2px gold focus ring, dark scrollbars, gold summary markers.
+- **Do** credit every wiki image file-by-file in Sources; all specimens are CC BY-NC-SA and their provenance ships inside the PNGs.
+- **Do** open numbered stops (01–06) with a strong hairline rule and a gold stop numeral; the number is the walking order ("read top to bottom"), not decoration.
 
 ### Don't:
-- **Don't** use any gradient, glass/blur, glow, or hard offset shadow — zero-gradient is a standing brief commitment, and the flat-press world is the enforcement.
-- **Don't** put colored side-stripes on content (cards, notes, list items): marks precede stripes; if a mark earns its place, draw the flag square instead.
+- **Don't** glow, glass, or neon on dark: no text-shadow, no blur, no gradient decoration on flat surfaces — gradients exist only as scrims over real photography.
+- **Don't** put colored fields behind text or side-stripes on content: route color rides as dots and tabs only.
+- **Don't** add eyebrows or kickers above headings; the masthead's event-clock wayfinding and the hero's event-clock fact are data lines, not labels — if a line stops carrying data, delete it.
 - **Don't** touch the author's first-person copy, the 🏜 desert-marker convention, or any wiki-traced number without re-checking pinned revisions (see PRODUCT.md bindings).
-- **Don't** introduce JavaScript, a build step, or new dependencies — plain HTML + one CSS file is the confirmed constraint; every disclosure works via `details` and CSS only.
-- **Don't** add eyebrows/kickers over headings; the masthead running head (the bordered schedule bar under the sticky bar) is the one sanctioned two-part opener, because it carries real departure information.
+- **Don't** fork the visual world into per-section variations; the catalog frame — numbers, rules, mats, seal — is one system across the whole guide.

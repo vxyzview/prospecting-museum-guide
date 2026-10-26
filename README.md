@@ -30,17 +30,29 @@ the mutation-forge math, event luck grades and the mineral ladders behind every 
   sites, 6★ stat ranges
 
 Setup design, costings, mutation queue, event grades and expected-value math are mine
-(vxyzview). Wiki text is CC BY-NC-SA; no Roblox assets are used on the site.
+(vxyzview). Wiki text and imagery are CC BY-NC-SA — scene images and item icons come
+from the Official Prospecting! Wiki, are downloaded into `public/img/`, and are
+credited file-by-file in the Sources section. Not affiliated with the game.
 
 ## How it's built
 
-Deliberately boring in the best way: plain HTML + one CSS file, no build step,
-no JavaScript, no dependencies. Edit `index.html` to update numbers, commit, push —
-GitHub Pages republishes on its own.
+Static React + Vite, deployed by GitHub Actions on every push to `main`. Prebuilt
+files only ship — no CDN-React, no runtime fetching, no trackers.
+
+Update the numbers by editing sources directly; commit, push, and Actions republishes:
 
 ```
-index.html   the whole guide
-style.css    desert-line timetable theme — sun-bleached paper, warm ink, hairline
-             rules, flat color only (no gradients); setups keyed to signature
-             mineral colors
+index.html                 Vite entry shell
+src/styles.css             night-room specimen catalog — warm near-black ground,
+                           off-white column, hairline rules, one desert-gold accent
+src/App.jsx                section order + anchors
+src/sections/*.jsx         the guide content (Answers, Ladders, Primer, Builds,
+                           Lab, Events, Workings, Sources)
+src/components/*.jsx       shared frames, drawn icons, hero, masthead/seal
+src/data/images.js         wiki image map + per-file credits
+public/img/                wiki images and cropped specimen icons
+.github/workflows/deploy.yml  build on main → deploy to GitHub Pages
 ```
+
+First-time run: `npm install`, then `npm run dev`. The site is served under
+`/prospecting-museum-guide/` (see `vite.config.js`) to match its GitHub Pages path.
