@@ -40,5 +40,7 @@ GitHub Pages republishes on its own.
 
 ```
 index.html   the whole guide
-style.css    dusk-plum theme, setups keyed to signature mineral colors
+style.css    desert-line timetable theme — sun-bleached paper, warm ink, hairline
+             rules, flat color only (no gradients); setups keyed to signature
+             mineral colors
 ```
